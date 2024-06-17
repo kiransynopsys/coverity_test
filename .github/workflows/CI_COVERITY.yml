@@ -5,7 +5,7 @@ name: CI-Coverity
 # Controls when the workflow will run
 on:
   push:
-    branches: [ main, master, develop, stage, release, SIGINT-1715 ]
+    branches: [ main, master, develop, stage, release ]
   pull_request:
     branches: [ main, master, develop, stage, release ]
 
