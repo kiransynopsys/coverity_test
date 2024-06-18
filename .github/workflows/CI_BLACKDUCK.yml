@@ -6,7 +6,7 @@ on:
     branches: [ main, master, develop, stage, release ]
 jobs:
   build:
-    runs-on: [ self-hosted ]
+    runs-on: [ mac-os ]
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
@@ -17,8 +17,8 @@ jobs:
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
-          synopsys_bridge_download_url: https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/2.5.13/synopsys-bridge-2.5.13-macosx.zip
-          # blackduck_reports_sarif_create: true                    
+          synopsys_bridge_download_url: https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip
+          # blackduck_reports_sarif_create: true
           # blackduck_reports_sarif_file_path:
           # blackduck_reports_sarif_severities:
           # blackduck_reports_sarif_groupSCAIssues:
@@ -29,7 +29,7 @@ jobs:
           # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
           blackduck_search_depth: 2
           blackduck_args: '--detect.diagnostic=true'
-          blackduck_config_path: '/Users/siyaram/Downloads/SynopsysTestConfig/application.properties'
+          blackduck_config_path: '/home/kirann/application.properties'
           ### Uncomment below configuration to enable automatic fix pull request creation if vulnerabilities are reported
           # blackduck_fixpr_enabled: true
           # blackduck_fixpr_maxCount: 5
