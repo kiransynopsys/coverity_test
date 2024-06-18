@@ -39,10 +39,10 @@ jobs:
           # coverity_branch_name: ${{ secrets.COVERITY_BRANCH_NAME }}
           #coverity_local: true
           #coverity_build_command:coverity_clean_command:coverity_config_path:coverity_args:
-          #coverity_args: -c /home/kirann/coverity.yml -o capture.build.clean-command="mvn clean" -- mvn clean install
+          coverity_args: -c /home/kirann/coverity.yml -o capture.build.clean-command="mvn clean" -- mvn clean install
           coverity_build_command: mvn clean install
           coverity_clean_command: mvn clean
-          coverity_config_path: /home/kirann/coverity.yml
+          #coverity_config_path: /home/kirann/coverity.yml
           # Mandatory for windows hosted environment
           # coverity_install_directory: "/root"
           synopsys_bridge_download_url: https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip
