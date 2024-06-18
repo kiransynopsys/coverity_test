@@ -29,8 +29,8 @@ jobs:
           ### Accepts Multiple Values
           # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
           # blackduck_search_depth: 2
-          blackduck_args: '--detect.diagnostic=true'
-          #blackduck_config_path: '/home/kirann/application.properties'
+          #blackduck_args: '--detect.diagnostic=true'
+          blackduck_config_path: '/home/kirann/application.properties'
           ### Uncomment below configuration to enable automatic fix pull request creation if vulnerabilities are reported
           # blackduck_fixpr_enabled: true
           # blackduck_fixpr_maxCount: 5
