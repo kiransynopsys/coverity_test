@@ -17,7 +17,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     #  runs-on: [ ubuntu-latest ]
-    runs-on: [mac-os]
+    runs-on: [Linux]
     # Use ubuntu-latest to run workflow on github hosted runner
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -40,8 +40,8 @@ jobs:
           #coverity_local: true
           #coverity_build_command:coverity_clean_command:coverity_config_path:coverity_args:
           coverity_args: -c /home/kirann/coverity.yml -o capture.build.clean-command="mvn clean" -- mvn clean install
-          #coverity_build_command: mvn clean install
-          #coverity_clean_command: mvn clean
+          coverity_build_command: mvn clean install
+          coverity_clean_command: mvn clean
           coverity_config_path: /home/kirann/coverity.yml
           # Mandatory for windows hosted environment
           # coverity_install_directory: "/root"
